@@ -1,5 +1,8 @@
 package tests.smartdeal;
 
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.appear;
@@ -9,13 +12,76 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 public class RegistrationTests extends TestBase {
-
     @Test
+    @Tag("myTest")
+    @DisplayName("Проверка кнопки 'Банкам'")
     void checkingTheButtonForBanks() {
+        step("Click on the banks button", () -> {
+            $$(".tn-atom").findBy(text("Банкам")).click();
+            $$(".tn-atom").findBy(text("Мы предлагаем"))
+                    .shouldHave(text("Мы предлагаем"));
+        });
+    }
+
+    @Disabled
+    @Test
+    @DisplayName("Проверка кнопки 'Застройщикам'")
+    void checkingTheButtonForDevelopers() {
+
+    }
+
+    @Disabled
+    @Test
+    @DisplayName("Проверка кнопки 'Получить консультацию'")
+    void checkingTheGetAdviceButton() {
+
+    }
+
+    @Disabled
+    @Test
+    @DisplayName("Проверка ссылки 'Блог'")
+    void  checkingTheBlogLink() {
+
+    }
+
+    @Disabled
+    @Test
+    @DisplayName("Проверка ссылки 'Команда'")
+    void checkingTheLinkCommand() {
+
+    }
+
+    @Disabled
+    @Test
+    @DisplayName("Проверка ссылки 'Контакты'")
+    void checkingTheContactsLink() {
+
+    }
+
+    @Disabled
+    @Test
+    @DisplayName("Проверка ссылки 'Справочный центр'")
+    void checkingTheHelpCenterLink() {
+
+    }
+
+    @Disabled
+    @Test
+    @DisplayName("Проверка ссылки 'Тарифы'")
+    void checkingTheLinkRates() {
+
+    }
+
+    @Disabled
+    @Test
+    @DisplayName("Проверка ссылки 'Правовая информация'")
+    void linkVerificationLegalInformation() {
 
     }
 
 
+
+    @Disabled
     @Test
     void successfulRegistrationTest() {
         step("Open registrations form", () -> {

@@ -9,11 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Tag("needed")
 public class DisabledTests {
     @Test
+    @Disabled
     void test1() {
         assertTrue(false);
     }
     
     @Test
+    @Disabled
     @Tag("prod")
     void test2() {
         assertTrue(false);
