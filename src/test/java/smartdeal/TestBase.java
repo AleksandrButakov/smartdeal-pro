@@ -1,4 +1,4 @@
-package tests.demoqa;
+package smartdeal;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -20,14 +20,14 @@ class TestBase {
     static void beforeAll() throws MalformedURLException {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = "https://smartdeal.pro/";
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "http://62.113.108.218:4444/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
             /* How to add test badge */
-            put("name", "My tests...");
+            put("name", "My tests https://smartdeal.pro");
 
             /* How to set session timeout */
             put("sessionTimeout", "15m");

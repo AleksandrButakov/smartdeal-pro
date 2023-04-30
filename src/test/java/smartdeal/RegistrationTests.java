@@ -1,7 +1,7 @@
-package tests.demoqa;
+package smartdeal;
 
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
+import smartdeal.TestBase;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
@@ -11,6 +11,8 @@ import static io.qameta.allure.Allure.step;
 
 public class RegistrationTests extends TestBase {
 
+
+
     @Test
     void successfulRegistrationTest() {
         step("Open registrations form", () -> {
@@ -19,6 +21,7 @@ public class RegistrationTests extends TestBase {
             executeJavaScript("$('#fixedban').remove()");
             executeJavaScript("$('footer').remove()");
         });
+
         step("Fill form", () -> {
             $("#firstName").setValue("Alex");
             $("#lastName").setValue("Egorov");
@@ -39,11 +42,13 @@ public class RegistrationTests extends TestBase {
             $("#stateCity-wrapper").$(byText("Delhi")).click();
             $("#submit").click();
         });
+
         step("Check form results", () -> {
             $(".modal-dialog").should(appear);
             $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
             $(".table-responsive").shouldHave(text("Alex"), text("Egorov"),
                     text("alex@egorov.com"), text("1234567890"));
         });
+
     }
 }
