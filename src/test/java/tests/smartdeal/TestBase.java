@@ -1,18 +1,19 @@
-package smartdeal;
+package tests.smartdeal;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import helpers.Attach;
+import tests.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import static com.codeborne.selenide.Configuration.*;
+import static com.codeborne.selenide.Selenide.*;
 
 class TestBase {
 
@@ -20,9 +21,9 @@ class TestBase {
     static void beforeAll() throws MalformedURLException {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.baseUrl = "https://smartdeal.pro/";
-        Configuration.browserSize = "1920x1080";
-        Configuration.remote = "http://62.113.108.218:4444/wd/hub";
+        baseUrl = "https://smartdeal.pro/";
+        browserSize = "1920x1080";
+        remote = "http://62.113.108.218:4444/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
@@ -41,11 +42,12 @@ class TestBase {
             put("enableVNC", true);
         }});
 
-        Configuration.browserCapabilities = capabilities;
+        browserCapabilities = capabilities;
     }
 
     @BeforeEach
     void addListener() {
+        open(baseUrl);
     }
 
     @AfterEach

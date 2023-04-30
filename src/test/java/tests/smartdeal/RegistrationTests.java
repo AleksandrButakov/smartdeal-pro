@@ -1,7 +1,6 @@
-package smartdeal;
+package tests.smartdeal;
 
 import org.junit.jupiter.api.Test;
-import smartdeal.TestBase;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
@@ -11,6 +10,10 @@ import static io.qameta.allure.Allure.step;
 
 public class RegistrationTests extends TestBase {
 
+    @Test
+    void checkingTheButtonForBanks() {
+
+    }
 
 
     @Test

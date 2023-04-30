@@ -1,2 +1,2 @@
-rootProject.name = "smartdeal"
+rootProject.name = "tests.smartdeal"
 
