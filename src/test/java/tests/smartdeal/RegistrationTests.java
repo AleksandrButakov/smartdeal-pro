@@ -16,18 +16,23 @@ public class RegistrationTests extends TestBase {
     @Tag("myTest")
     @DisplayName("Проверка кнопки 'Банкам'")
     void checkingTheButtonForBanks() {
-        step("Click on the banks button", () -> {
+        step("Checking the button for banks", () -> {
             $$(".tn-atom").findBy(text("Банкам")).click();
             $$(".tn-atom").findBy(text("Мы предлагаем"))
                     .shouldHave(text("Мы предлагаем"));
         });
     }
 
-    @Disabled
     @Test
     @DisplayName("Проверка кнопки 'Застройщикам'")
     void checkingTheButtonForDevelopers() {
-
+        step("Checking the button for developers", () -> {
+            $$(".tn-atom").findBy(text("Застройщикам")).click();
+            $$(".tn-atom").findBy(text("Мы предлагаем"))
+                    .shouldHave(text("Мы предлагаем"));
+//            $$(".tn-atom").findBy(text("Как SmartDeal помогает в организации "))
+//                    .shouldHave(text("Как SmartDeal помогает в организации "));
+        });
     }
 
     @Disabled
