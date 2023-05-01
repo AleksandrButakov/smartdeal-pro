@@ -25,6 +25,8 @@ class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         baseUrl = "https://smartdeal.pro";
+        browser = "chrome";
+        browserVersion = "112.0";
         browserSize = "1920x1080";
         remote = "http://62.113.108.218:4444/wd/hub";
 
@@ -46,7 +48,7 @@ class TestBase {
             put("enableVNC", true);
 
             /* How to enable video recording */
-            //put("enableVideo", true);
+            put("enableVideo", true);
 
         }});
         browserCapabilities = capabilities;
