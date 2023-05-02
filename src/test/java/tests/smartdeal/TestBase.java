@@ -1,8 +1,6 @@
 package tests.smartdeal;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import tests.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -12,11 +10,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selenide.*;
-import static javax.swing.UIManager.put;
+import static tests.helpers.Attach.*;
+import static com.codeborne.selenide.Selenide.sessionId;
 
 class TestBase {
 
@@ -52,21 +50,6 @@ class TestBase {
 
         }});
         browserCapabilities = capabilities;
-
-
-//        Configuration.baseUrl = "https://smartdeal.pro";
-//        Configuration.browser = "chrome";
-//        Configuration.browserVersion = "112.0";
-//        Configuration.browserSize = "1920x1080";
-//        Configuration.remote = "http://62.113.108.218:4444/wd/hub";
-//
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true
-//        ));
-//        Configuration.browserCapabilities = capabilities;
-
     }
 
     @BeforeEach
@@ -75,12 +58,24 @@ class TestBase {
         open(baseUrl);
     }
 
+//    @AfterEach
+//    void addAttachments() {
+//        Attach.screenshotAs("Last screenshot");
+//        Attach.pageSource();
+//        Attach.browserConsoleLogs();
+//        Attach.addVideo();
+//
+//    }
+
     @AfterEach
-    void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
+    public void afterEach(){
+        String sessionId = sessionId().toString(); //getSessionId();
+        attachScreenshot("Last screenshot");
+        attachPageSource();
+        //attachAsText("Browser console logs", getConsoleLogs());
+        closeWebDriver();
+        attachVideo(sessionId);
     }
+
 
 }
