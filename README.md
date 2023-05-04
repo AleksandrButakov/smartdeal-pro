@@ -29,7 +29,7 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 <img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
 <img width="6%" title="Selenide" src="images/logo/Selenide.svg">
 <img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
-<img width="6%" title="GitHub" src="images/logo/GitHub.png">
+<img width="6%" title="GitHub" src="images/logo/Github.png">
 <img width="6%" title="GitHub" src="images/logo/Docker.svg">
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
