@@ -1,6 +1,5 @@
 # Проект по автоматизации тестирования для SmartDeal
 ## <a target="_blank" href="https://www.rshb.ru/">Веб сайт https://smartdeal.pro</a>
-
 ## :shinto_shrine: Содержание:
 
 - <a href="#shinto_shrine-общая-информация-о-тестовом-фреймворке">Общая информация о тестовом фреймворке</a>
@@ -13,7 +12,7 @@
 - <a href="#shinto_shrine-видео-примеры-прохождения-тестов">Видео примеры прохождения тестов</a>
 
 ## :shinto_shrine: Общая информация о тестовом фреймворке
-  Для реализации данного тестового фреймворка на хостинге был развернут VPS
+&nbsp;&nbsp;&nbsp;Для реализации данного тестового фреймворка на хостинге был развернут VPS
 с Ubuntu 22.04, установлен Docker, в Docker Compose подняты Jenkins, Selenoid
 and Selenoid UI, настроены роли в Jenkins для доступа, загружены необходимые
 образы браузеров. Создан чат бот в Telegram для получения уведомлений о
@@ -50,18 +49,17 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 - Открытие окна чата, проверка наличия сообщения
 
 ## :shinto_shrine: Сборка в Jenkins
-### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/18/allure/">Сборка в Jenkins</a>
+### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/">Сборка в Jenkins</a>
 <p align="center">
-<img title="Jenkins Dashboard" src="images/screenshots/jenkins_dashboard.png">
+  <img title="Jenkins Dashboard" src="images/screenshots/jenkins_dashboard.png">
 </p>
 
 ### Параметры сборки в Jenkins:
 Сборка в Jenkins
 
 - browser (браузер, по умолчанию chrome)
+- browserVersion (версия браузера)
 - remoteUrl (адрес удаленного сервера selenoid)
-- user (пользователль удаленного сервера selenoid)
-- password (пароль от удаленного сервера selenoid)
 
 ## :shinto_shrine: Запуск из терминала
 Локальный запуск:
@@ -73,14 +71,13 @@ gradle clean test
 ```
 clean
 test
--Duser=${USER}
--Dpassword=${PASSWORD}
 -Dbrowser=${BROWSER}
+-DbrowserVersion=${BROWSER_VERSION}
 -DremoteBrowser=${REMOTE_BROWSER}
 ```
 
 ## :shinto_shrine: Allure отчет
-- ### Главный экран отчета
+- ### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/18/allure/">Главный экран отчета</a>
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure-main-page.png">
 </p>
