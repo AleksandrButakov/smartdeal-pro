@@ -40,3 +40,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/notifications/
+/gradle/
+/.idea/misc.xml
+/.idea/
+/gradle/
