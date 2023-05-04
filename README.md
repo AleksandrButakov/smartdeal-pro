@@ -50,8 +50,8 @@ gradle clean demowebshop
 
 
 
-# Проект по автоматизации тестирования для Россельхозбанка
-## <a target="_blank" href="https://www.rshb.ru/">Веб сайт https://rshb.ru</a>
+# Проект по автоматизации тестирования для SmartDeal
+## <a target="_blank" href="https://www.rshb.ru/">Веб сайт https://smartdeal.pro</a>
 
 ## :shinto_shrine: Содержание:
 
