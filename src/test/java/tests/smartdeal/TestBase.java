@@ -20,6 +20,7 @@ class TestBase {
 
     @BeforeAll
     static void beforeAll() throws MalformedURLException {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         baseUrl = "https://smartdeal.pro";
         browser = "chrome";
         browserVersion = "112.0";
@@ -51,7 +52,7 @@ class TestBase {
 
     @BeforeEach
     void addListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        // SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open(baseUrl);
     }
 
