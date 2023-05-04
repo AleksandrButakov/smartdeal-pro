@@ -55,6 +55,7 @@ gradle clean demowebshop
 
 ## :shinto_shrine: Содержание:
 
+- <a href="#shinto_shrine-общая-информация-о-тестовом-фреймворке">Общая информация о тестовом фреймворке</a>
 - <a href="#shinto_shrine-технологии-и-инструменты">Технологии и инструменты</a>
 - <a href="#shinto_shrine-реализованные-проверки">Реализованные проверки</a>
 - <a href="#shinto_shrine-сборка-в-Jenkins">Сборка в Jenkins</a>
@@ -63,30 +64,42 @@ gradle clean demowebshop
 - <a href="#shinto_shrine-отчет-в-telegram">Отчет в Telegram</a>
 - <a href="#shinto_shrine-видео-примеры-прохождения-тестов">Видео примеры прохождения тестов</a>
 
+## :shinto_shrine: Общая информация о тестовом фреймворке
+  Для реализации данного тестового фреймворка на хостинге был развернут VPS
+с Ubuntu 22.04, установлен Docker, в Docker Compose подняты Jenkins, Selenoid
+and Selenoid UI, настроены роли в Jenkins для доступа, загружены необходимые
+образы браузеров. Создан чат бот в Telegram для получения уведомлений о
+прохождении тестов из Jenkins. Создан проект в IntellijIDEA, запушен на GitHub.
+В коде добавлены все аттачменты для сохранения статистики проходжения тестов,
+такие как: Screenshot, PageSource, BrowserConsole and Video. 
+
 ## :shinto_shrine: Технологии и инструменты
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/IntelliJ_IDEA.svg">
 <img width="6%" title="Java" src="images/logo/Java.svg">
+<img width="6%" title="Gradle" src="images/logo/Gradle.svg">
+<img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
 <img width="6%" title="Selenide" src="images/logo/Selenide.svg">
 <img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
-<img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
-<img width="6%" title="Gradle" src="images\logo\Gradle.svg">
-<img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
-<img width="6%" title="GitHub" src="images\logo\GitHub.svg">
+<img width="6%" title="GitHub" src="images/logo/GitHub.svg">
+<img width="6%" title="GitHub" src="images/logo/Docker.svg">
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
+<img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
 
 ## :shinto_shrine: Реализованные проверки
-- Открытие сайта rshb.ru
-- Переход по ссылке «Частным лицам»
-- Выбор ссылки «Кредиты»
-- Выбор раздела «Кредит на любые цели»
-- Закрытие окна принятия файлов cookies 
-- Выбор типа платежа «Аннуитентный»
-- Выбор суммы кредита используя элемент slider
-- Выбор срока кредита 60 месяцев
-- Проверка соответствия значения 'Предварительный расчет' ожидаемому значению
+- Открытие сайта smartdeal.pro
+- Переход по кнопке: 'Банкам'
+- Переход по кнопке: 'Застройщикам'
+- Переход по кнопке: 'Получить консультацию'
+- Переход по ссылке: 'Блог'
+- Переход по ссылке: 'Контакты'
+- Переход по ссылке: 'Команда'
+- Переход по ссылке: 'Справочный центр'
+- Переход по ссылке: 'Тарифы'
+- Переход по ссылке: 'Правовая информация'
+- Открытие окна чата, проверка наличия сообщения
 
 ## :shinto_shrine: Сборка в Jenkins
 ### <a target="_blank" href="https://jenkins.autotests.cloud/job/011-anbnH-13_homework/">Сборка в Jenkins</a>
