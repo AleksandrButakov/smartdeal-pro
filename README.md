@@ -71,13 +71,13 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 образы браузеров. Создан чат бот в Telegram для получения уведомлений о
 прохождении тестов из Jenkins. Создан проект в IntellijIDEA, запушен на GitHub.
 В коде добавлены все аттачменты для сохранения статистики проходжения тестов,
-такие как: Screenshot, PageSource, BrowserConsole and Video. 
+такие как: Screenshot, PageSource, BrowserConsole and addVideo. 
 
 ## :shinto_shrine: Технологии и инструменты
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/IntelliJ_IDEA.svg">
 <img width="6%" title="Java" src="images/logo/Java.svg">
-<img width="6%" title="Gradle" src="images/logo/Gradle.svg">
+<img width="6%" title="Gradle" src="images/logo/Gradle.png">
 <img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
 <img width="6%" title="Selenide" src="images/logo/Selenide.svg">
 <img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
@@ -102,7 +102,7 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 - Открытие окна чата, проверка наличия сообщения
 
 ## :shinto_shrine: Сборка в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/011-anbnH-13_homework/">Сборка в Jenkins</a>
+### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/18/allure/">Сборка в Jenkins</a>
 <p align="center">
 <img title="Jenkins Dashboard" src="images/screenshots/jenkins-dashboard.png">
 </p>
