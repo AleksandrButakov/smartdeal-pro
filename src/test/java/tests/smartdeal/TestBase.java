@@ -51,8 +51,7 @@ class TestBase {
     }
 
     @BeforeEach
-    void addListener() {
-        open(baseUrl);
+    void beforeEach() {
     }
 
     @AfterEach

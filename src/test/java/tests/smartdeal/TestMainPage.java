@@ -13,10 +13,11 @@ import static io.qameta.allure.Allure.step;
 
 public class TestMainPage extends TestBase {
     @Test
-    @Tag("myTest")
+    @Tag("ui")
     @DisplayName("Проверка кнопки 'Банкам'")
     void checkingTheButtonForBanks() {
         step("Checking the button for banks", () -> {
+            open();
             $$(".tn-atom").findBy(text("Банкам")).click();
             $$(".tn-atom").findBy(text("Мы предлагаем"))
                     .shouldHave(text("Мы предлагаем"));
@@ -24,9 +25,11 @@ public class TestMainPage extends TestBase {
     }
 
     @Test
+    @Tag("ui")
     @DisplayName("Проверка кнопки 'Застройщикам'")
     void checkingTheButtonForDevelopers() {
         step("Checking the button for developers", () -> {
+            open();
             $$(".tn-atom").findBy(text("Застройщикам")).click();
             $$(".tn-atom").findBy(text("Мы предлагаем"))
                     .shouldHave(text("Мы предлагаем"));
@@ -34,9 +37,11 @@ public class TestMainPage extends TestBase {
     }
 
     @Test
+    @Tag("ui")
     @DisplayName("Проверка кнопки 'Получить консультацию'")
     void checkingTheGetAdviceButton() {
         step("Checking the button for developers", () -> {
+            open();
             $$(".tn-atom").findBy(text("Получить консультацию")).click();
             $$(".tn-atom").findBy(text("Получить консультацию"))
                     .shouldHave(text("Получить консультацию"));
