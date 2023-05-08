@@ -1,5 +1,6 @@
 package tests.smartdeal;
 
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -7,16 +8,18 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 public class TestMainPage extends TestBase {
     @Test
-    @Tag("myTest")
+    @Tag("ui")
     @DisplayName("Проверка кнопки 'Банкам'")
     void checkingTheButtonForBanks() {
         step("Checking the button for banks", () -> {
+            open(baseUrl);
             $$(".tn-atom").findBy(text("Банкам")).click();
             $$(".tn-atom").findBy(text("Мы предлагаем"))
                     .shouldHave(text("Мы предлагаем"));
@@ -24,9 +27,11 @@ public class TestMainPage extends TestBase {
     }
 
     @Test
+    @Tag("ui")
     @DisplayName("Проверка кнопки 'Застройщикам'")
     void checkingTheButtonForDevelopers() {
         step("Checking the button for developers", () -> {
+            open(baseUrl);
             $$(".tn-atom").findBy(text("Застройщикам")).click();
             $$(".tn-atom").findBy(text("Мы предлагаем"))
                     .shouldHave(text("Мы предлагаем"));
@@ -34,9 +39,11 @@ public class TestMainPage extends TestBase {
     }
 
     @Test
+    @Tag("ui")
     @DisplayName("Проверка кнопки 'Получить консультацию'")
     void checkingTheGetAdviceButton() {
         step("Checking the button for developers", () -> {
+            open(baseUrl);
             $$(".tn-atom").findBy(text("Получить консультацию")).click();
             $$(".tn-atom").findBy(text("Получить консультацию"))
                     .shouldHave(text("Получить консультацию"));

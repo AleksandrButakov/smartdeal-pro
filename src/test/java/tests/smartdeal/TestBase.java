@@ -15,6 +15,7 @@ import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selenide.*;
 import static helpers.Attach.*;
 import static com.codeborne.selenide.Selenide.sessionId;
+import static java.lang.System.*;
 
 class TestBase {
 
@@ -22,8 +23,10 @@ class TestBase {
     static void beforeAll() throws MalformedURLException {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         baseUrl = "https://smartdeal.pro";
-        browser = "chrome";
-        browserVersion = "112.0";
+
+        browser = getProperty("browser", "chrome");
+        browserVersion = getProperty("browserVersion", "112.0");
+
         browserSize = "1920x1080";
         remote = "http://62.113.108.218:4444/wd/hub";
 
@@ -51,9 +54,7 @@ class TestBase {
     }
 
     @BeforeEach
-    void addListener() {
-        // SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        open(baseUrl);
+    void beforeEach() {
     }
 
     @AfterEach
@@ -61,7 +62,7 @@ class TestBase {
         String sessionId = sessionId().toString(); //getSessionId();
         attachScreenshot("Last screenshot");
         attachPageSource();
-        browserConsoleLogs();
+        // browserConsoleLogs();
         closeWebDriver();
         attachVideo(sessionId);
     }
