@@ -80,7 +80,7 @@ test
 <table width="100%" cellspacing="0" cellpadding="0">
   <tr> 
     <td class="leftcol"><img src="images/logo/Java.svg" width="50" height="50"></td>
-    <td Allure отчет</td>
+    <td valign="top">Allure отчет</td>
   </tr>
 </table>
 
