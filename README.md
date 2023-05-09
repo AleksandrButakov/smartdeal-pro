@@ -78,7 +78,7 @@ test
 
 ## :shinto_shrine: Allure отчет
     
-  <img src="images/logo/Jenkins.svg" alt="ссылка" width="100" height="78">Посетите наш сайт, кликнув по картинке:</a>
+  <img src="images/logo/Jenkins.svg" alt="ссылка" width="100" height="78">Посетите наш сайт, кликнув по картинке:
 
 
 - ### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/18/allure/">Главный экран отчета</a>
