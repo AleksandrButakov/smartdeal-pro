@@ -48,8 +48,16 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 - Переход по ссылке: 'Правовая информация'
 - Открытие окна чата, проверка наличия сообщения
 
+<!--
 ## :shinto_shrine: Сборка в Jenkins
+-->
+
+## <img src="images/AllureTestOps.svg" width="25" height="25"  alt="Allure"/></a>*Интеграция с* <a target="_blank" href="https://allure.autotests.cloud/project/1430/dashboards">*Allure TestOps*</a>
+
+<img src="images/logo/Jenkins.svg" with="25" height="25" align=center>dsfdsfdsfdsdsfdsfdsffdss
+
 ### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/">Сборка в Jenkins</a>
+
 <p align="center">
   <img title="Jenkins Dashboard" src="images/screenshots/jenkins_dashboard.png">
 </p>
