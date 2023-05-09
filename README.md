@@ -76,17 +76,7 @@ clean
 test
 ```
 
-
-<table width="100%" cellspacing="0" cellpadding="0">
-  <tr> 
-    <td class="leftcol"><img src="images/logo/Java.svg" width="50" height="50"></td>
-    <td valign="top">Allure отчет</td>
-  </tr>
-</table>
-
-
-
-## :shinto_shrine: Allure отчет    
+## :o2: Allure отчет    
   <img src="images/logo/Jenkins.svg" width="30" height="30">Посетите наш сайт, кликнув по картинке:
 
 
@@ -100,12 +90,12 @@ test
 <img title="Allure Test Page" src="images/screenshots/allure_test_page.png">
 </p>
 
-## :shinto_shrine: Отчет в Telegram
+## :o2: Отчет в Telegram
 <p align="center">
 <img title="Telegram notification message" src="images/screenshots/telegram_notification.png">
 </p>
 
-## :shinto_shrine: Видео примеры прохождения тестов
+## :o2: Видео примеры прохождения тестов
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
   <img title="Selenoid Video" src="images/gif/smartdeal.gif">
