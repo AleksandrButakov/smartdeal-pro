@@ -77,9 +77,6 @@ test
 ```
 
 ## :o2: Allure отчет    
-  <img src="images/logo/Jenkins.svg" width="30" height="30">Посетите наш сайт, кликнув по картинке:
-
-
 - ### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/18/allure/">Главный экран отчета</a>
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure_main_page.png">
