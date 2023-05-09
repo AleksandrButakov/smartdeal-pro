@@ -1,6 +1,6 @@
 # Проект по автоматизации тестирования для SmartDeal
 ## <a target="_blank" href="https://www.rshb.ru/">Веб сайт https://smartdeal.pro</a>
-## :shinto_shrine: Содержание:
+## :o2: Содержание:
 
 - <a href="#shinto_shrine-общая-информация-о-тестовом-фреймворке">Общая информация о тестовом фреймворке</a>
 - <a href="#shinto_shrine-технологии-и-инструменты">Технологии и инструменты</a>
@@ -11,7 +11,7 @@
 - <a href="#shinto_shrine-отчет-в-telegram">Отчет в Telegram</a>
 - <a href="#shinto_shrine-видео-примеры-прохождения-тестов">Видео примеры прохождения тестов</a>
 
-## :shinto_shrine: Общая информация о тестовом фреймворке
+## :o2: Общая информация о тестовом фреймворке
 &nbsp;&nbsp;&nbsp;Для реализации данного тестового фреймворка на хостинге был развернут VPS
 с Ubuntu 22.04, установлен Docker, в Docker Compose подняты Jenkins, Selenoid
 and Selenoid UI, настроены роли в Jenkins для доступа, загружены необходимые
@@ -20,7 +20,7 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 В коде добавлены все аттачменты для сохранения статистики проходжения тестов,
 такие как: Screenshot, PageSource, BrowserConsole and addVideo. 
 
-## :shinto_shrine: Технологии и инструменты
+## :o2: Технологии и инструменты
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/IntelliJ_IDEA.svg">
 <img width="6%" title="Java" src="images/logo/Java.svg">
@@ -35,7 +35,7 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
 
-## :shinto_shrine: Реализованные проверки
+## :o2: Реализованные проверки
 - Открытие сайта smartdeal.pro
 - Переход по кнопке: 'Банкам'
 - Переход по кнопке: 'Застройщикам'
@@ -48,7 +48,6 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 - Переход по ссылке: 'Правовая информация'
 - Открытие окна чата, проверка наличия сообщения
 
-## :shinto_shrine: Сборка в Jenkins
 ### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/">Сборка в Jenkins</a>
 <p align="center">
   <img title="Jenkins Dashboard" src="images/screenshots/jenkins_dashboard.png">
@@ -61,10 +60,11 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 - browserSize (default 1920x1080)
 - threads (количество потоков)
 
-## :shinto_shrine: Запуск из терминала
+## :o2: Запуск из терминала
 Локальный запуск:
 ```bash
 gradle clean test
+gradle clean ui-test
 ```
 
 Удаленный запуск:
@@ -72,12 +72,11 @@ gradle clean test
 clean
 -Dbrowser=${BROWSER}
 -DbrowserVersion=${BROWSER_VERSION}
--DremoteBrowser=${REMOTE_BROWSER}
 -Dthreads=${THREADS}
 test
 ```
 
-## :shinto_shrine: Allure отчет
+## :o2: Allure отчет    
 - ### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/18/allure/">Главный экран отчета</a>
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure_main_page.png">
@@ -88,12 +87,12 @@ test
 <img title="Allure Test Page" src="images/screenshots/allure_test_page.png">
 </p>
 
-## :shinto_shrine: Отчет в Telegram
+## :o2: Отчет в Telegram
 <p align="center">
 <img title="Telegram notification message" src="images/screenshots/telegram_notification.png">
 </p>
 
-## :shinto_shrine: Видео примеры прохождения тестов
+## :o2: Видео примеры прохождения тестов
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
   <img title="Selenoid Video" src="images/gif/smartdeal.gif">
