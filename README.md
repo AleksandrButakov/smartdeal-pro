@@ -54,9 +54,17 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 
 ## <img src="images/AllureTestOps.svg" width="25" height="25"  alt="Allure"/></a>*Интеграция с* <a target="_blank" href="https://allure.autotests.cloud/project/1430/dashboards">*Allure TestOps*</a>
 
-<img src="images/logo/Jenkins.svg" with="25" height="25" align=center>
+<img src="images/logo/Jenkins.svg" with="25" height="25">
 
 ### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/">Сборка в Jenkins</a>
+
+
+
+<a href="https://htmlacademy.ru">
+  <img src="images/logo/Jenkins.svg" with="25" height="25">Проверкаааааа</a>
+
+
+
 <p align="center">
   <img title="Jenkins Dashboard" src="images/screenshots/jenkins_dashboard.png">
 </p>
