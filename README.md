@@ -49,6 +49,7 @@ and Selenoid UI, настроены роли в Jenkins для доступа, �
 - Открытие окна чата, проверка наличия сообщения
 
 ### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/">Сборка в Jenkins</a>
+
 <p align="center">
   <img title="Jenkins Dashboard" src="images/screenshots/jenkins_dashboard.png">
 </p>
@@ -77,6 +78,14 @@ test
 ```
 
 ## :shinto_shrine: Allure отчет
+    
+<p>Посетите наш сайт, кликнув по картинке:
+  <a href="httр://www.puzzleweb.ru">
+    <img src="images/logo/Jenkins.svg" alt="ссылка" width="100" height="78">
+  </a>
+</p>
+
+
 - ### <a target="_blank" href="http://62.113.108.218:8888/job/SmartDeal/18/allure/">Главный экран отчета</a>
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure_main_page.png">
