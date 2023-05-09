@@ -79,8 +79,8 @@ test
 
 <table width="100%" cellspacing="0" cellpadding="0">
   <tr> 
-    <td class="leftcol"><img src="images/logo/Java.svg" width="50" height="50">rewrwer</td>
-    <td valign="top">Allure отчет</td>
+    <td class="leftcol"><img src="images/logo/Java.svg" width="50" height="50"></td>
+    <td valign="top" align="center">Allure отчет</td>
   </tr>
 </table>
 
