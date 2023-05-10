@@ -44,6 +44,8 @@ class TestBase {
                 add("TZ=UTC");
             }});
 
+            put("console", true);
+
             /* How to enableVNC */
             put("enableVNC", true);
 
