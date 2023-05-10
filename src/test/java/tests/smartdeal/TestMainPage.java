@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
@@ -12,11 +13,13 @@ import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
+import static org.junit.jupiter.api.parallel.ExecutionMode.CONCURRENT;
 
 public class TestMainPage extends TestBase {
     @Test
     @Tag("ui")
     @DisplayName("Проверка кнопки 'Банкам'")
+    @Execution(CONCURRENT)
     void checkingTheButtonForBanks() {
         step("Checking the button for banks", () -> {
             open(baseUrl);
@@ -29,6 +32,7 @@ public class TestMainPage extends TestBase {
     @Test
     @Tag("ui")
     @DisplayName("Проверка кнопки 'Застройщикам'")
+    @Execution(CONCURRENT)
     void checkingTheButtonForDevelopers() {
         step("Checking the button for developers", () -> {
             open(baseUrl);
