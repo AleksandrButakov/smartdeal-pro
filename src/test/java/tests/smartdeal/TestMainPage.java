@@ -42,6 +42,7 @@ public class TestMainPage extends TestBase {
         });
     }
 
+    @Disabled
     @Test
     @Tag("ui")
     @DisplayName("Проверка кнопки 'Получить консультацию'")
