@@ -41,7 +41,7 @@ dependencies {
 tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
-    maxParallelForks(1)
+
 
 //    if (System.getProperty("threads") != null) {
 //        println(System.getProperty("threads"))
@@ -66,6 +66,8 @@ tasks.withType(Test) {
 task ui_test(type: Test) {
     useJUnitPlatform {
         includeTags("ui")
+
+        maxParallelForks(2)
     }
 }
 
