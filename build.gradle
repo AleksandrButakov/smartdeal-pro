@@ -42,17 +42,17 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
-    //if (System.getProperty("threads") != null) {
-      //  println(System.getProperty("threads"))
+    if (System.getProperty("threads") != null) {
+        println(System.getProperty("threads"))
 
         systemProperties += [
                 'junit.jupiter.execution.parallel.enabled'                 : true,
-//                'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
-//                'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
-//                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
-                'junit.jupiter.execution.parallel.config.fixed.parallelism': 2 // System.getProperty("threads").toInteger()
+                'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
+                'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
+                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
+                'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
         ]
-    //}
+    }
 
     testLogging {
         lifecycle {
@@ -65,8 +65,6 @@ tasks.withType(Test) {
 task ui_test(type: Test) {
     useJUnitPlatform {
         includeTags("ui")
-
-        maxParallelForks(2)
     }
 }
 

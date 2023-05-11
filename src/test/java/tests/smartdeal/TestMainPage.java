@@ -31,7 +31,6 @@ public class TestMainPage extends TestBase {
     @Test
     @Tag("ui")
     @DisplayName("Проверка кнопки 'Застройщикам'")
-    @Execution(CONCURRENT)
     void checkingTheButtonForDevelopers() {
         step("Checking the button for developers", () -> {
             open(baseUrl);
