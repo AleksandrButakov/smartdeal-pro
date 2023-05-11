@@ -42,8 +42,8 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
-    if (System.getProperty("threads") != null) {
-        println(System.getProperty("threads"))
+    //if (System.getProperty("threads") != null) {
+      //  println(System.getProperty("threads"))
 
         systemProperties += [
                 'junit.jupiter.execution.parallel.enabled'                 : true,
@@ -52,7 +52,7 @@ tasks.withType(Test) {
 //                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
                 'junit.jupiter.execution.parallel.config.fixed.parallelism': 2 // System.getProperty("threads").toInteger()
         ]
-    }
+    //}
 
     testLogging {
         lifecycle {
