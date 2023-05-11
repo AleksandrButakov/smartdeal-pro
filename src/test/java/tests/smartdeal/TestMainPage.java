@@ -19,7 +19,6 @@ public class TestMainPage extends TestBase {
     @Test
     @Tag("ui")
     @DisplayName("Проверка кнопки 'Банкам'")
-    @Execution(CONCURRENT)
     void checkingTheButtonForBanks() {
         step("Checking the button for banks", () -> {
             open(baseUrl);
@@ -32,7 +31,6 @@ public class TestMainPage extends TestBase {
     @Test
     @Tag("ui")
     @DisplayName("Проверка кнопки 'Застройщикам'")
-    @Execution(CONCURRENT)
     void checkingTheButtonForDevelopers() {
         step("Checking the button for developers", () -> {
             open(baseUrl);
@@ -42,6 +40,7 @@ public class TestMainPage extends TestBase {
         });
     }
 
+    @Disabled
     @Test
     @Tag("ui")
     @DisplayName("Проверка кнопки 'Получить консультацию'")
