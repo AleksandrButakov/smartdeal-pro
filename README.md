@@ -16,7 +16,8 @@
 с Ubuntu 22.04, установлен Docker, в Docker Compose подняты Jenkins, Selenoid
 and Selenoid UI, настроены роли в Jenkins для доступа, загружены необходимые
 образы браузеров. Создан чат бот в Telegram для получения уведомлений о
-прохождении тестов из Jenkins. Создан проект в IntellijIDEA, запушен на GitHub.
+прохождении тестов из Jenkins. Реализована параметризация и параллелизация выполнения тестовых
+сценариев. Создан проект в IntellijIDEA, запушен на GitHub.
 В коде добавлены все аттачменты для сохранения статистики проходжения тестов,
 такие как: Screenshot, PageSource, BrowserConsole and addVideo. 
 
