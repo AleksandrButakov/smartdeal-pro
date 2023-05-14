@@ -52,6 +52,30 @@ public class TestMainPage extends TestBase {
         });
     }
 
+    @Test
+    @Tag("ui")
+    @DisplayName("2Проверка кнопки 'Получить консультацию'")
+    void checkingTheGetAdviceButton2() {
+        step("Checking the button for developers", () -> {
+            open(baseUrl);
+            $$(".tn-atom").findBy(text("Получить консультацию")).click();
+            $$(".tn-atom").findBy(text("Получить консультацию"))
+                    .shouldHave(text("Получить консультацию"));
+        });
+    }
+
+    @Test
+    @Tag("ui")
+    @DisplayName("3Проверка кнопки 'Получить консультацию'")
+    void checkingTheGetAdviceButton3() {
+        step("Checking the button for developers", () -> {
+            open(baseUrl);
+            $$(".tn-atom").findBy(text("Получить консультацию")).click();
+            $$(".tn-atom").findBy(text("Получить консультацию"))
+                    .shouldHave(text("Получить консультацию"));
+        });
+    }
+
     @Disabled
     @Test
     @DisplayName("Проверка ссылки 'Блог'")
