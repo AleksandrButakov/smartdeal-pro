@@ -31,6 +31,7 @@ class TestBase {
 
         remote = "http://62.113.108.218:4444/wd/hub";
 
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
             /* How to add test badge */

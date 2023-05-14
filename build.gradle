@@ -41,6 +41,7 @@ dependencies {
 tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
+    maxParallelForks=2
 
     if (System.getProperty("threads") != null) {
         println(System.getProperty("threads"))
@@ -51,6 +52,7 @@ tasks.withType(Test) {
                 'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
                 'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
                 'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
+
         ]
     }
 
@@ -65,6 +67,7 @@ tasks.withType(Test) {
 task ui_test(type: Test) {
     useJUnitPlatform {
         includeTags("ui")
+        maxParallelForks=2
     }
 }
 
