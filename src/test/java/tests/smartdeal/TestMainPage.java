@@ -1,6 +1,8 @@
 package tests.smartdeal;
 
 import com.codeborne.selenide.Configuration;
+import com.google.common.eventbus.AllowConcurrentEvents;
+import org.checkerframework.checker.units.qual.Current;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.parallel.Execution;
 
@@ -50,6 +52,7 @@ public class TestMainPage extends TestBase {
     }
 
     @Test
+
     @Order(1)
     @Tag("ui")
     @DisplayName("2Проверка кнопки 'Получить консультацию'")

@@ -25,7 +25,6 @@ class TestBase {
         baseUrl = "https://smartdeal.pro";
         browserSize = "1920x1080";
 
-
         browser = getProperty("browser", "chrome");
         browserVersion = getProperty("browserVersion", "112.0");
 
