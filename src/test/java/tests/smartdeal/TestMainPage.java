@@ -1,10 +1,7 @@
 package tests.smartdeal;
 
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.parallel.Execution;
 
 import static com.codeborne.selenide.Condition.appear;
@@ -53,6 +50,7 @@ public class TestMainPage extends TestBase {
     }
 
     @Test
+    @Order(1)
     @Tag("ui")
     @DisplayName("2Проверка кнопки 'Получить консультацию'")
     void checkingTheGetAdviceButton2() {
@@ -65,6 +63,7 @@ public class TestMainPage extends TestBase {
     }
 
     @Test
+    @Order(2)
     @Tag("ui")
     @DisplayName("3Проверка кнопки 'Получить консультацию'")
     void checkingTheGetAdviceButton3() {
