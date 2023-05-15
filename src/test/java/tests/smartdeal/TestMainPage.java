@@ -1,10 +1,9 @@
 package tests.smartdeal;
 
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import com.google.common.eventbus.AllowConcurrentEvents;
+import org.checkerframework.checker.units.qual.Current;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.parallel.Execution;
 
 import static com.codeborne.selenide.Condition.appear;
@@ -40,11 +39,37 @@ public class TestMainPage extends TestBase {
         });
     }
 
-    @Disabled
     @Test
     @Tag("ui")
     @DisplayName("Проверка кнопки 'Получить консультацию'")
     void checkingTheGetAdviceButton() {
+        step("Checking the button for developers", () -> {
+            open(baseUrl);
+            $$(".tn-atom").findBy(text("Получить консультацию")).click();
+            $$(".tn-atom").findBy(text("Получить консультацию"))
+                    .shouldHave(text("Получить консультацию"));
+        });
+    }
+
+    @Test
+
+    @Order(1)
+    @Tag("ui")
+    @DisplayName("2Проверка кнопки 'Получить консультацию'")
+    void checkingTheGetAdviceButton2() {
+        step("Checking the button for developers", () -> {
+            open(baseUrl);
+            $$(".tn-atom").findBy(text("Получить консультацию")).click();
+            $$(".tn-atom").findBy(text("Получить консультацию"))
+                    .shouldHave(text("Получить консультацию"));
+        });
+    }
+
+    @Test
+    @Order(2)
+    @Tag("ui")
+    @DisplayName("3Проверка кнопки 'Получить консультацию'")
+    void checkingTheGetAdviceButton3() {
         step("Checking the button for developers", () -> {
             open(baseUrl);
             $$(".tn-atom").findBy(text("Получить консультацию")).click();

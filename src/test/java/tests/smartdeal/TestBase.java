@@ -25,11 +25,11 @@ class TestBase {
         baseUrl = "https://smartdeal.pro";
         browserSize = "1920x1080";
 
-
         browser = getProperty("browser", "chrome");
         browserVersion = getProperty("browserVersion", "112.0");
 
         remote = "http://62.113.108.218:4444/wd/hub";
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
