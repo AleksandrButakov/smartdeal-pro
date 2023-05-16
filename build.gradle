@@ -61,39 +61,20 @@ tasks.withType(Test) {
     }
 }
 
+task ui_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("ui")
+    }
+}
 
+task one_property_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("one_property")
+    }
+}
 
-
-//task ui_test(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("ui")
-//        maxParallelForks(1)
-//        maxParallelForks = 2
-//
-//        if (System.getProperty("threads") != null) {
-//            println(System.getProperty("threads"))
-//
-//            systemProperties += [
-//                    'junit.jupiter.execution.parallel.enabled'                 : true,
-//                    'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
-//                    'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
-//                    'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
-//                    'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
-//
-//            ]
-//        }
-//
-//    }
-//}
-//
-//task one_property_test(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("one_property")
-//    }
-//}
-//
-//task hello_test(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("hello")
-//    }
-//}
+task hello_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("hello")
+    }
+}
