@@ -87,41 +87,6 @@ public class TestMainPage extends TestBase {
 
     @Disabled
     @Test
-    @DisplayName("Проверка ссылки 'Команда'")
-    void checkingTheLinkCommand() {
-
-    }
-
-    @Disabled
-    @Test
-    @DisplayName("Проверка ссылки 'Контакты'")
-    void checkingTheContactsLink() {
-
-    }
-
-    @Disabled
-    @Test
-    @DisplayName("Проверка ссылки 'Справочный центр'")
-    void checkingTheHelpCenterLink() {
-
-    }
-
-    @Disabled
-    @Test
-    @DisplayName("Проверка ссылки 'Тарифы'")
-    void checkingTheLinkRates() {
-
-    }
-
-    @Disabled
-    @Test
-    @DisplayName("Проверка ссылки 'Правовая информация'")
-    void linkVerificationLegalInformation() {
-
-    }
-
-    @Disabled
-    @Test
     void successfulRegistrationTest() {
         step("Open registrations form", () -> {
             open("/automation-practice-form");
