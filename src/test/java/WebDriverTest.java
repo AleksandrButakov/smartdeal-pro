@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WebDriverTest {
-
     private WebDriver driver;
 
     @BeforeEach
@@ -18,7 +17,7 @@ public class WebDriverTest {
     @Test
     public void testGitHub() {
         String title = driver.getTitle();
-        assertEquals("GitHub: Where the world builds software · GitHub", title);
+        assertEquals("GitHub: Let’s build from here · GitHub", title);
     }
 
     @AfterEach

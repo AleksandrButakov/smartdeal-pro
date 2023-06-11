@@ -1,10 +1,6 @@
 package tests.smartdeal;
 
-import com.codeborne.selenide.Configuration;
-import com.google.common.eventbus.AllowConcurrentEvents;
-import org.checkerframework.checker.units.qual.Current;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.parallel.Execution;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
@@ -12,7 +8,6 @@ import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
-import static org.junit.jupiter.api.parallel.ExecutionMode.CONCURRENT;
 
 public class TestMainPage extends TestBase {
     @Test
@@ -81,7 +76,7 @@ public class TestMainPage extends TestBase {
     @Disabled
     @Test
     @DisplayName("Проверка ссылки 'Блог'")
-    void  checkingTheBlogLink() {
+    void checkingTheBlogLink() {
 
     }
 
