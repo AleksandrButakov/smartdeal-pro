@@ -6,6 +6,8 @@ public class WebDriverConfig {
         return "https://github.com";
     }
 
-
+    public Browser getBrowser() {
+        return Browser.CHROME;
+    }
 
 }
