@@ -6,16 +6,16 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import static com.codeborne.selenide.Configuration.*;
+import static com.codeborne.selenide.Selenide.*;
 import static helpers.Attach.*;
 import static com.codeborne.selenide.Selenide.sessionId;
-
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static java.lang.System.getProperty;
+import static java.lang.System.*;
 
 class TestBase {
 
@@ -29,6 +29,7 @@ class TestBase {
         browserVersion = getProperty("browserVersion", "112.0");
 
         remote = "http://62.113.108.218:4444/wd/hub";
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{

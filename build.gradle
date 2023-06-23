@@ -34,12 +34,7 @@ dependencies {
             "io.qameta.allure:allure-selenide:$allureVersion",
             "com.github.javafaker:javafaker:1.0.2",
             "org.junit.jupiter:junit-jupiter:5.9.2",
-            "org.slf4j:slf4j-simple:$slf4jVersion",
-            'org.junit.jupiter:junit-jupiter-api:5.8.1',
-            'org.seleniumhq.selenium:selenium-java:3.141.59',
-            'io.github.bonigarcia:webdrivermanager:5.2.1',
-            'org.aeonbits.owner:owner:1.0.4',
-            'org.assertj:assertj-core:3.23.1'
+            "org.slf4j:slf4j-simple:$slf4jVersion"
     )
 }
 
@@ -47,17 +42,15 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
-    systemProperties(System.getProperties())
-
-//    if (System.getProperty("threads") != 0) {
-//        systemProperties += [
-//                'junit.jupiter.execution.parallel.enabled'                 : true,
-//                'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
-//                'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
-//                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
-//                'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
-//        ]
-//    }
+    if (System.getProperty("threads") != null) {
+        systemProperties += [
+                'junit.jupiter.execution.parallel.enabled'                 : true,
+                'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
+                'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
+                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
+                'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
+        ]
+    }
 
     testLogging {
         lifecycle {
