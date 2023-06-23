@@ -24,7 +24,7 @@ public class WebDriverConfig {
     }
 
     public Browser getBrowser() {
-        return Browser.FIREFOX;
+        return Browser.CHROME;
     }
 
 }

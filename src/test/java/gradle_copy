@@ -1,3 +1,4 @@
+// рабочий gradle, не удалять!
 plugins {
     id 'java-library'
     id 'io.qameta.allure' version '2.10.0'
@@ -35,11 +36,17 @@ dependencies {
             "com.github.javafaker:javafaker:1.0.2",
             "org.junit.jupiter:junit-jupiter:5.9.2",
             "org.slf4j:slf4j-simple:$slf4jVersion",
+
+
+
+
             'org.junit.jupiter:junit-jupiter-api:5.8.1',
             'org.seleniumhq.selenium:selenium-java:3.141.59',
             'io.github.bonigarcia:webdrivermanager:5.2.1',
             'org.aeonbits.owner:owner:1.0.4',
             'org.assertj:assertj-core:3.23.1'
+
+
     )
 }
 
@@ -84,4 +91,41 @@ task hello_test(type: Test) {
     useJUnitPlatform {
         includeTags("hello")
     }
+}
+
+
+
+
+// gradle для owner
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+def allureVersion = "2.19.0",
+    slf4jVersion = "2.0.7"
+
+dependencies {
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter-api:5.8.1',
+            'org.seleniumhq.selenium:selenium-java:3.141.59',
+            'io.github.bonigarcia:webdrivermanager:5.2.1',
+            'org.aeonbits.owner:owner:1.0.4',
+            'org.assertj:assertj-core:3.23.1',
+
+            "org.slf4j:slf4j-simple:$slf4jVersion"
+    )
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.1')
+}
+
+test {
+    useJUnitPlatform()
+    //-PbaseUrl=https://github.com -Pbrowser=FIREFOX
+    systemProperties(System.getProperties())
 }

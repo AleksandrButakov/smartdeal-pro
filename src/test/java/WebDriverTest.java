@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WebDriverTest {
-    private WebDriver driver;
+    WebDriver driver;
 
     @BeforeEach
     public void startDriver() {

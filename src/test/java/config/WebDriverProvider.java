@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.function.Supplier;
 
@@ -34,13 +33,7 @@ public class WebDriverProvider implements Supplier<WebDriver> {
             }
             case FIREFOX: {
                 WebDriverManager.firefoxdriver().setup();
-
-                FirefoxOptions options = new FirefoxOptions();
-                options.addArguments("-headless");
-                //options.addArguments("-headless");
-
-
-                return new FirefoxDriver(options);
+                return new FirefoxDriver();
             }
             default: {
                 throw new RuntimeException("No such driver");
