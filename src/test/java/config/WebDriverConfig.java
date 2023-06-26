@@ -3,49 +3,15 @@ package config;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;
-import java.util.Objects;
 
-public class WebDriverConfig {
+public interface WebDriverConfig extends Config {
+    @Key("baseUrl")
+    String getBaseUrl();
 
-//    @Config.Key("baseUrl")
-//    @Config.DefaultValue("https://github.com")
-//    String getBaseUrl();
-//
-//    @Config.Key("browser")
-//    @Config.DefaultValue("CHROME")
-//    Browser getBrowser();
-//
-//    @Config.Key("remoteUrl")
-//    @Config.DefaultValue("http://localhost:4444")
-//    URL getRemoteURL();
+    @Key("browser")
+    Browser getBrowser();
 
-
-    public String getBaseUrl() {
-        // reading the value from the settings
-        String baseUrl = System.getProperty("baseUrl");
-
-        // checking the default value
-        if (Objects.isNull(baseUrl)) {
-            baseUrl = "https://github.com";
-        }
-
-        return baseUrl;
-        // https://github.com
-    }
-
-    public Browser getBrowser() {
-        // reading the value from the settings
-        String browser = System.getProperty("browser");
-
-        // checking the default value
-        if (Objects.isNull(browser)) {
-            browser = "CHROME";
-        }
-
-        // returning the result with type conversion
-        return Browser.valueOf(browser);
-
-        // return Browser.CHROME;
-    }
+    @Key("remoteUrl")
+    URL getRemoteURL();
 
 }
