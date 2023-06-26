@@ -20,11 +20,15 @@ public class WebDriverConfig {
 
 
     public String getBaseUrl() {
-        return "https://github.com";
+        String baseUrl = System.getProperty("baseUrl");
+        return baseUrl;
+        // https://github.com
     }
 
     public Browser getBrowser() {
-        return Browser.FIREFOX;
+        String browser = System.getProperty("browser");
+        // return Browser.CHROME;
+        return Browser.valueOf(browser);
     }
 
 }
