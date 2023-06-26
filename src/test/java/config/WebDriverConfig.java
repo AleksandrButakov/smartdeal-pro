@@ -3,6 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;
+import java.util.Objects;
 
 public class WebDriverConfig {
 
@@ -20,15 +21,31 @@ public class WebDriverConfig {
 
 
     public String getBaseUrl() {
+        // reading the value from the settings
         String baseUrl = System.getProperty("baseUrl");
+
+        // checking the default value
+        if (Objects.isNull(baseUrl)) {
+            baseUrl = "https://github.com";
+        }
+
         return baseUrl;
         // https://github.com
     }
 
     public Browser getBrowser() {
+        // reading the value from the settings
         String browser = System.getProperty("browser");
-        // return Browser.CHROME;
+
+        // checking the default value
+        if (Objects.isNull(browser)) {
+            browser = "CHROME";
+        }
+
+        // returning the result with type conversion
         return Browser.valueOf(browser);
+
+        // return Browser.CHROME;
     }
 
 }
