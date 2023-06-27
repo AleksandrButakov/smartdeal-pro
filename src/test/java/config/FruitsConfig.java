@@ -9,16 +9,16 @@ public interface FruitsConfig extends Config {
     @Key("array")
     String[] getFruitsArray();
 
-    @Key("array")
-    @Separator(";")
+    @Key("array-with-default-values")
     @DefaultValue("orange; banana")
-    List<String> getFruitsArrayWithSeparator();
+    String[] getFruitsArrayWithDefaultValues();
 
     @Key("list")
     List<String> getFruitsList();
 
-    @Key("list")
+    @Separator(";")
+    @Key("list-with-separator")
     @DefaultValue("orange; banana")
-    List<String> getFruitsArrayWithDefaultValues();
+    List<String> getFruitsListWithSeparator();
 
 }

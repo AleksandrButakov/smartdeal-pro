@@ -24,4 +24,18 @@ public class FruitsTest {
                 .containsExactly("banana", "orange");
     }
 
+    @Test
+    public void testArrayWithDefaultValues() {
+        FruitsConfig config = ConfigFactory.create(FruitsConfig.class, System.getProperties());
+        assertThat(config.getFruitsArrayWithDefaultValues())
+                .containsExactly("banana", "orange");
+    }
+
+    @Test
+    public void testArrayWithSeparator() {
+        FruitsConfig config = ConfigFactory.create(FruitsConfig.class, System.getProperties());
+        assertThat(config.getFruitsListWithSeparator())
+                .containsExactly("orange", "banana");
+    }
+
 }
