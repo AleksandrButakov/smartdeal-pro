@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selenide.*;
-import static helpers.Attach.*;
+import static helpers.AllureAttachments.*;
 import static com.codeborne.selenide.Selenide.sessionId;
 import static java.lang.System.*;
 
