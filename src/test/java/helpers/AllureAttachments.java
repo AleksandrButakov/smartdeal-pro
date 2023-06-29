@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
-public class Attach {
+public class AllureAttachments {
     @Attachment(value = "Page source", type = "text/plain")
     public static byte[] attachPageSource() {
         return getWebDriver().getPageSource().getBytes(StandardCharsets.UTF_8);
