@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 import java.net.URL;
 
 @Config.Sources({
-        "classpath:mobile.properties"
+        "classpath:testing.properties"
 })
 
 public interface WebDriverConfig extends Config {
