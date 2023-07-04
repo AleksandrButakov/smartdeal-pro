@@ -4,7 +4,6 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
@@ -23,16 +22,11 @@ class TestBase {
     static void beforeAll() throws MalformedURLException {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-
-
         baseUrl = "https://smartdeal.pro";
-        browserSize = "1920x1080";
-
         browser = getProperty("browser", "chrome");
         browserVersion = getProperty("browserVersion", "112.0");
-
+        browserSize = "1920x1080";
         remote = "http://62.113.108.218:4444/wd/hub";
-
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
@@ -57,10 +51,6 @@ class TestBase {
 
         }});
         browserCapabilities = capabilities;
-    }
-
-    @BeforeEach
-    void beforeEach() {
     }
 
     @AfterEach

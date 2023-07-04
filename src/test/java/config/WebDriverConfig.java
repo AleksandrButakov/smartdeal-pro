@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 import java.net.URL;
 
-public interface RemoteDriverConfig extends Config {
+public interface WebDriverConfig extends Config {
 
     @Key("baseUrl")
     @DefaultValue("https://smartdeal.pro")
