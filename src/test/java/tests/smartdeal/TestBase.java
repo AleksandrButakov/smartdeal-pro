@@ -22,6 +22,8 @@ class TestBase {
     static void beforeAll() throws MalformedURLException {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
+
+
         baseUrl = "https://smartdeal.pro";
         browser = getProperty("browser", "chrome");
         browserVersion = getProperty("browserVersion", "112.0");
