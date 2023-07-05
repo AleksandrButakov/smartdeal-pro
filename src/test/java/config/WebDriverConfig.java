@@ -4,13 +4,12 @@ import org.aeonbits.owner.Config;
 import java.net.URL;
 
 @Config.Sources({
-        "classpath:testing.properties"
+        "classpath:config/testing.properties"
 })
 
 public interface WebDriverConfig extends Config {
 
     @Key("webdriver.baseUrl")
-    @DefaultValue("https://smartdeal.pro")
     String getWebDriverBaseUrl();
 
 }
