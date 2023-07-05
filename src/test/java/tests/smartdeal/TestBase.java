@@ -2,6 +2,7 @@ package tests.smartdeal;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.BrowserConfig;
+import config.WebDriverConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
@@ -24,20 +25,21 @@ class TestBase {
     static void beforeAll() throws MalformedURLException {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-        BrowserConfig config = ConfigFactory.create(BrowserConfig.class, System.getProperties());
+        WebDriverConfig webDriverConfig = ConfigFactory.create(WebDriverConfig.class, getProperties());
+        BrowserConfig browserConfig = ConfigFactory.create(BrowserConfig.class, System.getProperties());
 
-        baseUrl = "https://smartdeal.pro";
-        browser = config.getBrowserType();
-        browserVersion = config.getBrowserVersion();
-        browserSize = config.getBrowserSize();
-        remote = "http://62.113.108.218:4444/wd/hub";
+        baseUrl = webDriverConfig.getWebDriverBaseUrl();
+//        browser = browserConfig.getBrowserType();
+//        browserVersion = browserConfig.getBrowserVersion();
+//        browserSize = browserConfig.getBrowserSize();
+//        remote = "http://62.113.108.218:4444/wd/hub";
 
 
 //        baseUrl = "https://smartdeal.pro";
-//        browser = getProperty("browser", "chrome");
-//        browserVersion = getProperty("browserVersion", "112.0");
-//        browserSize = "1920x1080";
-//        remote = "http://62.113.108.218:4444/wd/hub";
+        browser = getProperty("browser", "chrome");
+        browserVersion = getProperty("browserVersion", "112.0");
+        browserSize = "1920x1080";
+        remote = "http://62.113.108.218:4444/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{

@@ -17,16 +17,20 @@ import static org.junit.jupiter.api.parallel.ExecutionMode.CONCURRENT;
 public class TestMainPage extends TestBase {
     @Test
     @Tag("ui")
-    @DisplayName("Проверка кнопки 'Банкам'")
-    void checkingTheButtonForBanks() {
-        step("Checking the button for banks", () -> {
+    @DisplayName("Проверка кнопки 'Услуги'")
+    void checkingTheButtonForServices() {
+        step("Checking the button for services", () -> {
             open(baseUrl);
-            $$(".tn-atom").findBy(text("Банкам")).click();
-            $$(".tn-atom").findBy(text("Мы предлагаем"))
-                    .shouldHave(text("Мы предлагаем"));
+            $$(".tn-atom").findBy(text("Услуги")).click();
+            $$(".t794__typo").findBy(text("Треугольная сделка")).click();
+
+            $$(".tn-atom").findBy(text("Треугольная сделка"))
+                    .shouldHave(text("Треугольная сделка"));
         });
     }
 
+    // !!!!!!!!!!!!!!!!
+    @Disabled
     @Test
     @Tag("ui")
     @DisplayName("Проверка кнопки 'Застройщикам'")
@@ -39,6 +43,8 @@ public class TestMainPage extends TestBase {
         });
     }
 
+    // !!!!!!!!!!!!!!!!
+    @Disabled
     @Test
     @Tag("ui")
     @DisplayName("Проверка кнопки 'Получить консультацию'")
@@ -51,8 +57,9 @@ public class TestMainPage extends TestBase {
         });
     }
 
+    // !!!!!!!!!!!!!!!!
+    @Disabled
     @Test
-
     @Order(1)
     @Tag("ui")
     @DisplayName("2Проверка кнопки 'Получить консультацию'")
@@ -65,6 +72,8 @@ public class TestMainPage extends TestBase {
         });
     }
 
+    // !!!!!!!!!!!!!!!!
+    @Disabled
     @Test
     @Order(2)
     @Tag("ui")

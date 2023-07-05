@@ -8,7 +8,7 @@ import org.aeonbits.owner.Config;
 
 public interface RemoteConfig extends Config {
 
-    @Key("webdriver.baseUrl")
-    String getWebDriverBaseUrl();
+//    @Key("webdriver.baseUrl")
+//    String getWebDriverBaseUrl();
 
 }

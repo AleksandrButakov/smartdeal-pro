@@ -9,7 +9,8 @@ import java.net.URL;
 
 public interface WebDriverConfig extends Config {
 
-    @Key("remote.driver")
-    String getRemoteDriver();
+    @Key("webdriver.baseUrl")
+    @DefaultValue("https://smartdeal.pro")
+    String getWebDriverBaseUrl();
 
 }
