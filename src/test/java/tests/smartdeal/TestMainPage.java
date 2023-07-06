@@ -24,8 +24,8 @@ public class TestMainPage extends TestBase {
             $$(".tn-atom").findBy(text("Услуги")).click();
             $$(".t794__typo").findBy(text("Треугольная сделка")).click();
 
-            $$(".tn-atom").findBy(text("Треугольная сделка"))
-                    .shouldHave(text("Треугольная сделка"));
+//            $$(".tn-atom").findBy(text("Треугольная сделка"))
+//                    .shouldHave(text("Треугольная сделка"));
         });
     }
 

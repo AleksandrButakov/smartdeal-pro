@@ -2,6 +2,7 @@ package tests.smartdeal;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.BrowserConfig;
+import config.RemoteDriverConfig;
 import config.WebDriverConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
@@ -26,20 +27,21 @@ class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         WebDriverConfig webDriverConfig = ConfigFactory.create(WebDriverConfig.class, getProperties());
-        BrowserConfig browserConfig = ConfigFactory.create(BrowserConfig.class, System.getProperties());
-
         baseUrl = webDriverConfig.getWebDriverBaseUrl();
-//        browser = browserConfig.getBrowserType();
-//        browserVersion = browserConfig.getBrowserVersion();
-//        browserSize = browserConfig.getBrowserSize();
-//        remote = "http://62.113.108.218:4444/wd/hub";
 
+        BrowserConfig browserConfig = ConfigFactory.create(BrowserConfig.class, System.getProperties());
+        browser = browserConfig.getBrowserType();
+        browserVersion = browserConfig.getBrowserVersion();
+        browserSize = browserConfig.getBrowserSize();
+
+        RemoteDriverConfig remoteDriverConfig = ConfigFactory.create(RemoteDriverConfig.class, System.getProperties());
+        remote = remoteDriverConfig.getRemoteDriver();
 
 //        baseUrl = "https://smartdeal.pro";
-        browser = getProperty("browser", "chrome");
-        browserVersion = getProperty("browserVersion", "112.0");
-        browserSize = "1920x1080";
-        remote = "http://62.113.108.218:4444/wd/hub";
+//        browser = getProperty("browser", "chrome");
+//        browserVersion = getProperty("browserVersion", "112.0");
+//        browserSize = "1920x1080";
+//        remote = "http://62.113.108.218:4444/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
