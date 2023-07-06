@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:testing.properties"
+        "classpath:config/testing.properties"
 })
 
 public interface BrowserConfig extends Config {
