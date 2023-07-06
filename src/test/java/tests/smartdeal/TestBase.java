@@ -2,7 +2,7 @@ package tests.smartdeal;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.BrowserConfig;
-import config.RemoteConfig;
+import config.RemoteDriverConfig;
 import config.WebDriverConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
@@ -34,8 +34,8 @@ class TestBase {
         browserVersion = browserConfig.getBrowserVersion();
         browserSize = browserConfig.getBrowserSize();
 
-        RemoteConfig remoteConfig = ConfigFactory.create(RemoteConfig.class, System.getProperties());
-        remote = remoteConfig.getRemoteUrl();
+        RemoteDriverConfig remoteDriverConfig = ConfigFactory.create(RemoteDriverConfig.class, System.getProperties());
+        remote = remoteDriverConfig.getRemoteDriver();
 
 //        baseUrl = "https://smartdeal.pro";
 //        browser = getProperty("browser", "chrome");

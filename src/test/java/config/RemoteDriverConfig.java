@@ -6,9 +6,9 @@ import org.aeonbits.owner.Config;
         "classpath:config/testing.properties"
 })
 
-public interface RemoteConfig extends Config {
+public interface RemoteDriverConfig extends Config {
 
-    @Key("remote.url")
-    String getRemoteUrl();
+    @Key("remote.driver")
+    String getRemoteDriver();
 
 }
