@@ -22,8 +22,17 @@ import static java.lang.System.*;
 
 class TestBase {
 
+    /*
+        @BeforeEach
+    public void startDriver() {
+        driver = new WebDriverProvider().get();
+    }
+     */
+
     @BeforeAll
     static void beforeAll() throws MalformedURLException {
+        DriverSettings.configure();
+
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         WebDriverConfig webDriverConfig = ConfigFactory.create(WebDriverConfig.class, getProperties());
