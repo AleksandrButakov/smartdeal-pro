@@ -17,12 +17,14 @@ import static org.junit.jupiter.api.parallel.ExecutionMode.CONCURRENT;
 public class TestMainPage extends TestBase {
     @Test
     @Tag("ui")
-    @DisplayName("Проверка кнопки 'Услуги'")
+    @DisplayName("Проверка ссылки 'Кейсы'")
     void checkingTheButtonForServices() {
         step("Checking the button for services", () -> {
             open(baseUrl);
-            $$(".tn-atom").findBy(text("Услуги")).click();
-            $$(".t794__typo").findBy(text("Треугольная сделка")).click();
+            $$(".header__menuItem").findBy(text("Кредиты")).hover();
+            //$$(".tn-atom").findBy(text("Кейсы")).click();
+            //$$(".tn-atom").findBy(text("Кейсы SmartDeal")).click();
+            sleep(5000);
 
 //            $$(".tn-atom").findBy(text("Треугольная сделка"))
 //                    .shouldHave(text("Треугольная сделка"));

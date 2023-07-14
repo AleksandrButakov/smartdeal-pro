@@ -4,6 +4,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import config.BrowserConfig;
 import config.RemoteDriverConfig;
 import config.WebDriverConfig;
+import helpers.DriverSettings;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
@@ -31,9 +32,9 @@ class TestBase {
 
     @BeforeAll
     static void beforeAll() throws MalformedURLException {
-        DriverSettings.configure();
-
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
+        //DriverSettings.configure();
 
         WebDriverConfig webDriverConfig = ConfigFactory.create(WebDriverConfig.class, getProperties());
         baseUrl = webDriverConfig.getWebDriverBaseUrl();
